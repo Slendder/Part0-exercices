@@ -1,0 +1,21 @@
+graph TD
+A[User] --> B[Browser]
+B --> C[GET https://studies.cs.helsinki.fi/exampleapp/spa]
+C --> D[200 OK]
+D --> E[Display SPA notes page]
+E --> F[User interacts with page]
+F --> G[Browser sends AJAX request to create note]
+G --> H[Server]
+H --> I[Server processes request]
+I --> J[Server sends JSON data]
+J --> K[Browser receives JSON data]
+K --> L[Browser updates SPA notes page with new note]
+
+A[User] --> User_interacts[User interacts with page to create new note]
+User_interacts --> G[Browser sends AJAX request to create note]
+
+H[Server] --> I[Server processes request]
+
+K[Browser receives JSON data] --> L[Browser updates SPA notes page with new note]
+
+A[User] --> Receives_updated_page[User receives updated SPA notes page with new note]

@@ -1,0 +1,17 @@
+gantt
+dateFormat  YYYY-MM-DD
+title User creates a new note
+section User
+  User enters text : text, 2023-02-01, 1d
+  User clicks Save button : click, 2023-02-02, 1d
+section Browser
+  Browser sends POST request : post, 2023-02-03, 1d
+section Server
+  Server creates new note : create, 2023-02-04, 1d
+  Server sends 302 Redirect : redirect, 2023-02-05, 1d
+section Browser
+  Browser sends GET request : get, 2023-02-06, 1d
+section Server
+  Server sends 200 OK response : ok, 2023-02-07, 1d
+section Browser
+  Browser displays updated notes page : display, 2023-02-08, 1d
